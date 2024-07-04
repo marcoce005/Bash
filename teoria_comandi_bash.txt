@@ -1,0 +1,5 @@
+cat /etc/shells			# per vedere tutte le shell possibili
+
+which bash		# per vedere la bash in uso
+
+chmod +x "file"		# per renderlo eseguibile
