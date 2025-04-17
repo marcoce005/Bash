@@ -2,9 +2,9 @@
 
 # script for bash shell and KDE desktop enviroment [tested on Garuda linux]
 
-battery_level=`acpi -b | grep -P -o '[0-9]+(?=%)'`;
+battery_level=`acpi -b | grep "Battery 0" | grep -P -o '[0-9]+(?=%)'`;
 
-battery_status=`acpi -b | grep -P -o '[A-Za-z]+(?=,)'`;
+battery_status=`acpi -b | grep "Battery 0" | grep -P -o '[A-Za-z]+(?=,)'`;
 
 if [ $battery_level -gt 82 ] && [ $battery_status == "Charging" ]
 then
